@@ -7,7 +7,7 @@ from collect_feeds import read_entries,collect
 class TestRadar(unittest.TestCase):
  def setUp(self):self.records=json.loads((ROOT/"fixtures/synthetic_tactics.json").read_text())
  def test_score_range(self):self.assertTrue(all(20<=x["triage_score"]<=100 for x in rank(self.records)))
- def test_ranking(self):self.assertEqual(rank(self.records)[0]["id"],"MPR-002")
+ def test_ranking(self):self.assertEqual([x["id"] for x in rank(self.records)],["MPR-001","MPR-002","MPR-004","MPR-003"])
  def test_bad_score(self):
   r=dict(self.records[0]);r["evidence_strength"]=6
   with self.assertRaises(ValueError):evaluate(r)
