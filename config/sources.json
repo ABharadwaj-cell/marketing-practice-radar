@@ -1,0 +1,19 @@
+{
+  "policy": "Sources must be publicly accessible and permitted; verify before enabling.",
+  "sources": [
+    {
+      "id": "google-search-central-blog",
+      "name": "Google Search Central Blog",
+      "rss": "https://developers.google.com/search/blog/rss.xml",
+      "channel": "official_platform_updates",
+      "enabled": false
+    },
+    {
+      "id": "search-engine-land",
+      "name": "Search Engine Land",
+      "rss": "https://searchengineland.com/feed",
+      "channel": "industry_publication",
+      "enabled": false
+    }
+  ]
+}
